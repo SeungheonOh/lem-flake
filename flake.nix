@@ -144,8 +144,8 @@
         '';
         installPhase = ''
           mkdir -p $out/bin
-          cp -v lem $out/bin
-          wrapProgram $out/bin/lem \
+          cp -v lem $out/bin/lem-exec
+          wrapProgram $out/bin/lem-exec \
             --prefix LD_LIBRARY_PATH : $LD_LIBRARY_PATH \
         '';
         passthru = {
